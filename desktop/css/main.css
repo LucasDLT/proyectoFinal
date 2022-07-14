@@ -1,0 +1,835 @@
+
+/*RESET*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/****************PAGINA PRINCIPAL******************/ 
+
+
+
+
+/*CONTENEDOR INDEX*/
+
+
+.contenedorIndex{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto  ;
+    grid-template-areas: "header header header"
+                          "menu menu menu"
+                          "main main main"
+                          "footer footer footer";
+}
+
+/*GRID INDEX-----------*/
+
+.headerIndex{
+    grid-area: header;
+}
+
+
+.menu {
+    grid-area: menu;
+}
+
+
+.contenedorFormulario{
+    grid-area: main;
+}
+
+
+.footerIndex{
+    grid-area: footer;
+}
+
+
+/*BODY IMAGEN/COLOR DE FONDO*/
+
+body{
+    background-color: rgb(255, 215, 134); 
+    background-image: url("../img/moderna-fondo-body.webp");
+}
+
+
+/*LOGO TAMAÑOS*/
+
+header div img{
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    border-radius: 70px;
+}
+
+
+
+header div:hover{
+    transform: scale(1);
+    transition: 3s;
+}
+
+
+
+
+
+/*HEADER COLOR DE FONDO*/
+
+header{
+    background-color: rgb(185, 94, 48);
+    margin-top: 10px;
+    color: rgb(237, 193, 139);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;  
+    font-size: 15px; 
+    background-image: url("../img/madera-fondo-header.jpg");
+    background-image: repeat;
+    justify-content: left;
+    display: flex;
+}
+
+
+/*MENU NAV ESTILOS*/
+
+nav{ 
+    display: flex;
+    justify-content: right;
+    justify-items: center;
+    align-items: center;
+    margin-right: 20px;    
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;  
+    padding: 5px;
+
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 30px;
+    height: 10px;
+    left: 0px;
+    text-shadow: 1px 1px whitesmoke;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+/*SUBMENU PRODUCTOS*/
+
+nav ul li .subMenu{
+    display: none;
+    position: absolute;
+   
+   
+}
+
+
+.menu ul li:hover > .subMenu{
+    display: flex;
+    flex-direction: column;
+    
+      
+}
+
+
+/*MAIN-------------------*/
+
+
+.contenedorFormulario{
+    display: grid;
+    justify-content:end;
+    margin: 100px;
+}
+
+
+/*FORMULARIO*/
+
+form{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    width: 250px; 
+    height: 400px;
+    border-radius: 10px;
+    border: 1px black ;
+    overflow: hidden; 
+    background-image: url("../img/madera-fondo.jpg");
+    background-repeat: no-repeat;
+    display:flex;
+    
+  
+}
+
+
+form fieldset legend{
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px; 
+    border-radius: 60px;
+    
+}
+
+
+.footerIndex{
+    display: none;
+}
+
+
+
+/*-------------------------------PRODUCTOS---------------------------------*/
+
+
+
+/*MENU PRODUCTOS*/
+
+
+
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:0.1fr 1fr 0.1fr ;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";  
+    flex-wrap: wrap;                                           
+}
+
+.headerProductos{
+    grid-area: header;
+    display: inline-block;
+    font-size: 10px;
+    
+        
+}
+
+header div img{
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 70px;
+}
+
+
+
+
+.headerProductos div img{
+    display: flex;
+    
+}
+
+.menuProductos {
+        margin: 5rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-around;
+        
+    }
+
+    .listaProductos li a img{
+        border-radius: 50px;
+        height: 15rem;
+        display: flex;
+
+    }
+
+    
+
+/*FOOTER*/
+
+.footerProductos{
+    grid-area: footer;
+    font-size: xx-small;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+        
+}
+
+
+/*ESTILOS ENLACES DEL FOOTER*/
+
+footer div a{
+    color: rgb(175, 155, 141);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px;
+    list-style: none;
+    font-size: 15px;
+           
+}
+
+
+.homeProductos{
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+.mueblesMedidaProductos {
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 90px;
+    
+    
+}
+
+
+
+/*FOOTER REDES*/   
+.mueblesRedesDesktop  {
+    color:rgb(52, 14, 14);
+    text-decoration: none;
+    font-size: 10px;
+      
+}
+
+/*----------------------------ESTILOS LIVING-----------------------------*/
+
+/*CONTENEDOR PRINCIPAL DE LIVING-----------------------------*/
+.contenedorPrincipal{
+    height: 100vh;
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:0.1fr 3f 0.1fr;
+    grid-template-areas: "header header"
+                         "main main"
+                         "footer footer";
+    align-items: center;
+     
+}
+
+/*HEADER LIVING*/
+.headerLiving {
+    grid-area: header;
+    margin: 1px;
+    
+    
+}
+
+/*MAIN LIVING*/
+
+.estilosLiving{
+    display: flex;
+    flex-wrap: wrap; 
+    border: solid;  
+    
+    
+}
+
+
+.footerLiving{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 30px;
+}
+
+
+.inicioLiving {
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 90px;
+}
+
+
+
+.contactoLiving{
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 90px;
+}
+
+/*LISTADO DE PRODUCTOS LIVING*/
+
+.listaLiving{
+    list-style: none;
+    width: 70rem;
+    display: flex;
+    border: solid;
+}
+
+
+
+
+/*ESTILOS Y GRID DE IMAGENES*/
+.estilosLiving ul li img{
+    border-radius:  80px; 
+    margin: 20px;
+    width: 100%;
+    display: grid;
+    box-shadow: 2px 2px gray;
+    
+}
+
+
+
+
+
+.imagen1{
+    grid-area: imagen1;
+    flex-wrap: wrap;
+}
+
+.imagen2{
+    grid-area: imagen2;
+    flex-wrap: wrap;
+
+}
+
+.imagen3{
+    grid-area: imagen3;
+    flex-wrap: wrap;
+
+}
+
+.imagen4{
+    grid-area: imagen4;
+    flex-wrap: wrap;
+
+}
+
+.imagen5{
+    grid-area: imagen5;
+    flex-wrap: wrap;
+
+}
+
+.imagen6{
+    grid-area: imagen6;
+    flex-wrap: wrap;
+
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES DEL INDEX TABLET-----------------------------------------------------------*/
+
+@media screen and (max-width:1000px) {
+    
+ /*CONTENEDOR INDEX*/
+    .contenedorIndex{
+    flex-wrap: wrap;    
+    display: grid;
+    grid-template-columns: 1fr 1f 1fr ;
+    grid-template-rows:0.5fr 1fr 3fr 1fr;
+    grid-template-areas:  "header header header"
+                          "submenu submenu submenu"
+                          "main main main"
+                           "footer footer footer"   ;    
+    }
+
+/*HEADER INDEX-----------------------------------*/    
+    header{
+        justify-content: center;
+        display: flex;    
+    }
+    
+/*FORMULARIO OCULTO*/    
+    .contenedorFormulario{
+       
+        display: flex;
+        justify-content: center;
+    }
+
+/*GRID INDEX*/    
+    .headerIndex{
+        grid-area: header;
+    }
+
+    .menu{
+        grid-area: submenu;
+            
+    }
+    
+   .footerIndex{
+        grid-area: footer;
+    } 
+
+    .contenedorFormulario{
+        grid-area: main;
+    }
+
+/*MENU-------------------------------------------*/
+
+.menu{ 
+    flex-flow: column;
+    justify-content: space-around;  
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    
+}
+
+
+
+
+/*-------------------------------PRODUCTOS---------------------------------*/
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:0.1fr 1fr 0.1fr ;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";  
+                                               
+}
+
+.headerProductos{
+    grid-area: header;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0px;
+    height: 10rem;
+           
+}
+
+
+.headerProductos div {
+    display: flex;
+    padding: 5px;    
+}
+
+
+.menuProductos {
+        display: flex;
+        flex-wrap: wrap;
+        grid-area: main;
+               
+    }
+
+    
+    .menuProductos .listaProductos li a img{
+        width: 100%;
+    }
+
+
+
+
+/*FOOTER*/
+
+.footerProductos{
+    grid-area: footer;
+    display: flex;
+    justify-content:space-around ;
+        
+}
+
+/*ESTILOS ENLACES DEL FOOTER*/
+
+
+
+
+.mueblesMedidaProductos {
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 90px;
+}
+
+
+
+
+
+/*FOOTER REDES--------------------------------------*/   
+.mueblesRedesDesktop  {
+    color:rgb(52, 14, 14);
+    text-decoration: none;
+    font-size: 10px;
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/*MEDIA QUERIES INDEX MOBILE*/
+
+@media screen and (max-width:600px) {   
+
+/*CONTENEDOR INDEX*/
+.contenedorIndex{
+    flex-wrap: wrap;    
+    display: grid;
+    grid-template-columns: 1fr 1f 1fr ;
+    grid-template-rows:0.5fr 1fr 1fr;
+    grid-template-areas:  "header header header"
+                          "submenu submenu submenu"
+                          "footer footer footer" ;    
+    }
+
+
+
+    /*GRID INDEX*/    
+    .headerIndex{
+        grid-area: header;
+    }
+
+    .menu{
+        grid-area: submenu;
+            
+    }
+    
+   .footerIndex{
+        grid-area: footer;
+    } 
+
+/*FORMULARIO OCULTO*/
+
+.contenedorFormulario{
+    display: none;
+}
+
+
+
+/*MENU VERTICAL------------------------*/
+
+.menu {
+    display: flex;
+    flex-direction: column wrap;
+    font-size: 40px;
+    padding: 5px;
+    height: 20rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    text-align:center ; 
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+   }
+   
+   .menu ul li a{
+       flex-flow: column wrap;
+       justify-content: center;
+       justify-items: center;
+       align-items: center;
+       border-radius: 80px;
+       font-size: 2rem;
+       border: solid 3px rgb(149, 77, 26) ;
+       
+   }
+
+   
+   .menu ul li{
+       margin: 2rem;
+   }
+
+/*SUB MENU BLOQUEADO*/
+nav ul li .subMenu{
+    display: none; 
+}
+.menu ul li:hover > .subMenu{
+    display: none;      
+}
+
+
+
+
+   
+
+/*FOOTER MUEBLES A TU MEDIDA------------------------*/ 
+
+.footerIndex {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content:space-between;
+    align-items: flex-end;
+    height: 50px;
+}
+
+
+.mueblesMedidaDesktop {
+    background-image: url("../img/madera-fondo.jpg");
+    display: flex;   
+    justify-content:center;  
+    justify-items: center;    
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    
+}
+
+
+
+/*FOOTER REDES--------------------------------------*/   
+.mueblesRedesDesktop  {
+    color:rgb(52, 14, 14);
+    text-decoration: none;
+    font-size: 10px;
+      
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ESTILOS DECO*/
+.estilosDeco ul li img{
+    border-radius: 90px;
+    margin: 20px;
+    display: inline;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+/*ESTILOS COCINA*/
+
+.estilosCocina ul li img{
+    border-radius: 90px; 
+    margin: 20px;
+    display: inline;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+/*ESTILOS NOSOTROS*/
+
+.estilosNosotros p{
+    background-color: beige;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: medium;
+    margin: 20px 20px;
+  
+}
+
+
