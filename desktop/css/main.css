@@ -67,14 +67,6 @@ header div img{
 
 
 
-header div:hover{
-    transform: scale(1);
-    transition: 3s;
-}
-
-
-
-
 
 /*HEADER COLOR DE FONDO*/
 
@@ -155,7 +147,7 @@ nav ul li .subMenu{
 
 /*FORMULARIO*/
 
-form{
+.contenedorFormulario form{
     color:rgb(255, 255, 255);
     text-align: center;
     font-family: 'Caveat', cursive;
@@ -167,13 +159,13 @@ form{
     overflow: hidden; 
     background-image: url("../img/madera-fondo.jpg");
     background-repeat: no-repeat;
-    display:flex;
-    
+    display:flex; 
   
 }
 
 
-form fieldset legend{
+
+.contenedorFormulario form fieldset legend{
     color:rgb(0, 0, 0);
     font-weight: bold;
     font-size: 30px; 
@@ -245,9 +237,17 @@ header div img{
         border-radius: 50px;
         height: 15rem;
         display: flex;
+        transition: 2s;
 
     }
 
+    
+    .listaProductos li a img:hover{
+        transform: scale(1.1);
+        box-shadow: 1px 2px gray;
+       
+
+    } 
     
 
 /*FOOTER*/
