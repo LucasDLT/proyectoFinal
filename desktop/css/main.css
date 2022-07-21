@@ -49,7 +49,7 @@
 
 /*BODY IMAGEN/COLOR DE FONDO*/
 
-body{
+.bodyIndex{
     background-color: rgb(255, 215, 134); 
     background-image: url("../img/moderna-fondo-body.webp");
 }
@@ -70,7 +70,7 @@ header div img{
 
 /*HEADER COLOR DE FONDO*/
 
-header{
+.headerIndex{
     background-color: rgb(185, 94, 48);
     margin-top: 10px;
     color: rgb(237, 193, 139);
@@ -182,7 +182,24 @@ nav ul li .subMenu{
 
 /*-------------------------------PRODUCTOS---------------------------------*/
 
+.bodyProductos{
+    background-color: rgb(255, 215, 134); 
+    background-image: url("../img/moderna-fondo-body.webp");
+}
 
+.headerProductos{
+    background-color: rgb(185, 94, 48);
+    margin-top: 10px;
+    color: rgb(237, 193, 139);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;  
+    font-size: 15px; 
+    background-image: url("../img/madera-fondo-header.jpg");
+    background-image: repeat;
+    justify-content: left;
+    display: flex;
+}
 
 /*MENU PRODUCTOS*/
 
@@ -233,8 +250,8 @@ header div img{
         grid-area: main;
         align-items: center;
         justify-items: center;
-        justify-content: space-around;
-        
+        justify-content: center;
+        text-align: center;
     }
 
     .listaProductos li a img{
@@ -324,17 +341,34 @@ footer div h2:hover{
 
 /*----------------------------ESTILOS LIVING-----------------------------*/
 
+.bodyLiving{
+    background-color: rgb(255, 215, 134); 
+    background-image: url("../img/moderna-fondo-body.webp");
+}
+
+.headerLiving{
+    background-color: rgb(185, 94, 48);
+    margin-top: 10px;
+    color: rgb(237, 193, 139);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;  
+    font-size: 15px; 
+    background-image: url("../img/madera-fondo-header.jpg");
+    background-image: repeat;
+    justify-content: left;
+    display: flex;
+}
 /*CONTENEDOR PRINCIPAL DE LIVING-----------------------------*/
 .contenedorPrincipal{
     height: 100vh;
     display: grid;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:0.1fr 3f 0.1fr;
     grid-template-areas: "header header"
                          "main main"
                          "footer footer";
-    align-items: center;
      
 }
 
@@ -342,25 +376,124 @@ footer div h2:hover{
 .headerLiving {
     grid-area: header;
     margin: 1px;
-    
-    
+    display: flex;
+    justify-content: space-between;   
 }
+
+
+.headerLiving h1 {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: right;
+    margin: 10px;
+}
+
 
 /*MAIN LIVING*/
 
 .estilosLiving{
+    grid-area: main;
     display: flex;
     flex-wrap: wrap; 
-    border: solid;  
-    
-    
+    flex-direction: column;
+    align-items: ;
+    justify-content: ;
+    justify-items: ;
+    margin: 8rem;
 }
+
+
+.listaLiving{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "imagen1 imagen2"
+                          "imagen3 imagen4"  
+                          "imagen5 imagen6";
+   
+}
+
+
+
+.imagen1{
+    grid-area: imagen1;
+}
+
+
+.imagen2{
+    grid-area: imagen2;
+}
+
+
+.imagen3{
+    grid-area: imagen3;
+}
+
+
+.imagen4{
+    grid-area: imagen4;
+}
+
+
+.imagen5{
+    grid-area: imagen5;
+}
+
+
+.imagen6{
+    grid-area: imagen6;
+}
+
+
+
+
+
+
+/*LISTADO DE PRODUCTOS LIVING*/
+
+.listaLiving{
+    flex-wrap: nowrap;
+    list-style: none;
+    width: 80rem;
+    height: 60rem;
+}
+
+
+.estilosLiving ul li{
+}
+
+/*ESTILOS DE IMAGENES*/
+.estilosLiving ul li img{
+    border-radius:  80px; 
+    margin: 20px;
+    height: 15rem;
+    height: 15rem;
+    box-shadow: 2px 3px gray;
+    position: relative;
+    justify-content: space-around;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .footerLiving{
     grid-area: footer;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+    justify-items: flex-end;
     font-size: 10px;
     margin: 30px;
 }
@@ -390,66 +523,7 @@ footer div h2:hover{
     border-radius: 90px;
 }
 
-/*LISTADO DE PRODUCTOS LIVING*/
 
-.listaLiving{
-    list-style: none;
-    width: 70rem;
-    display: flex;
-    border: solid;
-}
-
-
-
-
-/*ESTILOS Y GRID DE IMAGENES*/
-.estilosLiving ul li img{
-    border-radius:  80px; 
-    margin: 20px;
-    width: 100%;
-    display: grid;
-    box-shadow: 2px 2px gray;
-    
-}
-
-
-
-
-
-.imagen1{
-    grid-area: imagen1;
-    flex-wrap: wrap;
-}
-
-.imagen2{
-    grid-area: imagen2;
-    flex-wrap: wrap;
-
-}
-
-.imagen3{
-    grid-area: imagen3;
-    flex-wrap: wrap;
-
-}
-
-.imagen4{
-    grid-area: imagen4;
-    flex-wrap: wrap;
-
-}
-
-.imagen5{
-    grid-area: imagen5;
-    flex-wrap: wrap;
-
-}
-
-.imagen6{
-    grid-area: imagen6;
-    flex-wrap: wrap;
-
-}
 
 
     
@@ -774,8 +848,6 @@ nav ul li .subMenu{
       
 }
 
-
-
 }
 
 
@@ -807,6 +879,26 @@ nav ul li .subMenu{
 
 
 /*ESTILOS DECO*/
+
+.headerDeco{
+    background-color: rgb(185, 94, 48);
+    margin-top: 10px;
+    color: rgb(237, 193, 139);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;  
+    font-size: 15px; 
+    background-image: url("../img/madera-fondo-header.jpg");
+    background-image: repeat;
+    justify-content: left;
+    display: flex;
+}
+
+.bodyDeco{
+    background-color: rgb(255, 215, 134); 
+    background-image: url("../img/moderna-fondo-body.webp");
+}
+
 .estilosDeco ul li img{
     border-radius: 90px;
     margin: 20px;
@@ -821,6 +913,26 @@ nav ul li .subMenu{
 
 /*ESTILOS COCINA*/
 
+.headerCocina{
+    background-color: rgb(185, 94, 48);
+    margin-top: 10px;
+    color: rgb(237, 193, 139);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;  
+    font-size: 15px; 
+    background-image: url("../img/madera-fondo-header.jpg");
+    background-image: repeat;
+    justify-content: left;
+    display: flex;
+}
+
+.bodyCocina{
+    background-color: rgb(255, 215, 134); 
+    background-image: url("../img/moderna-fondo-body.webp");
+}
+
+
 .estilosCocina ul li img{
     border-radius: 90px; 
     margin: 20px;
@@ -832,15 +944,5 @@ nav ul li .subMenu{
 
 
 
-/*ESTILOS NOSOTROS*/
-
-.estilosNosotros p{
-    background-color: beige;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: medium;
-    margin: 20px 20px;
-  
-}
 
 
